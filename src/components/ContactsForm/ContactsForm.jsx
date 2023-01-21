@@ -32,7 +32,7 @@ resetForm = () => {
 }
 
     render() {
-        const { name, number } = this.state
+        const {name, number} = this.state
         
         return (
             <div>
@@ -67,4 +67,8 @@ resetForm = () => {
         )
     }
 
+}
+
+ContactsForm.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
 }

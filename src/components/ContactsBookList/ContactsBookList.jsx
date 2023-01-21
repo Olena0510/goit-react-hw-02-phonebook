@@ -1,4 +1,4 @@
-import PropTypes, { number } from 'prop-types';
+import PropTypes from 'prop-types';
 import { ContactsBookItem } from 'components/ContactsBookItem/ContactsBookItem';
 
 export const ContactsBookList = ({contacts }) => {
