@@ -32,7 +32,7 @@ resetForm = () => {
 }
 
     render() {
-        const {name, number} = this.state
+        
         
         return (
             <div>
