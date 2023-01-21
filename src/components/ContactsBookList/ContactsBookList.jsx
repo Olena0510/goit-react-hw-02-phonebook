@@ -4,12 +4,13 @@ import { ContactsBookItem } from 'components/ContactsBookItem/ContactsBookItem';
 export const ContactsBookList = ({contacts }) => {
     return (
         <ul>
-            {contacts.map(contact => (
-                <li key={contact.id}>
+            {contacts.map(({id, name, number}) => (
+                <li key={id}>
                     <ContactsBookItem
                         name={name}
                         number={number}
-                        id={id} />
+                         id={id}
+                         />
                 </li>
            ))}
         </ul>

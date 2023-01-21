@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const ContactsBookItem = ({ name,number, id }) => {
+export const ContactsBookItem = ({ name,number }) => {
     <div>
         <p>{name}:{number}</p>
     </div>
