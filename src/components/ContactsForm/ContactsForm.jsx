@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import PropTypes from 'prop-types';
 
 
@@ -13,7 +13,7 @@ export class ContactsForm extends Component {
         const {name, value} = event.currentTarget
     this.setState(
       {
-        id: nanoid(),
+        // id: nanoid(),
         [name]: value,
       })
   }

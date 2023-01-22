@@ -9,5 +9,5 @@ export const ContactsBookItem = ({ name,number }) => {
 ContactsBookItem.propTypes = {
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
+    // id: PropTypes.string.isRequired,
 }
