@@ -6,7 +6,7 @@ export const ContactsBookList = ({contacts, deleteContact }) => {
     <ul>
           {contacts.map(({ id, name, number }) => (
                   <li key={id}>
-                  <ContactsBookItem name={name} number={number} deleteContact = {deleteContact} />
+                  <ContactsBookItem name={name} number={number} id={id} deleteContact = {deleteContact} />
               </li>
           )
         )}

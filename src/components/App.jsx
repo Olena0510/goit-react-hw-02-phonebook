@@ -22,8 +22,8 @@ export class App extends Component {
     
     const contact = {
       id: nanoid(),
-      name: name,
-      number: number,
+      name,
+      number,
     }
 
     if (
@@ -38,8 +38,8 @@ export class App extends Component {
       return;
       }
 
-    this.setState(prevState => ({
-      contacts: [contact, ...prevState.contacts],
+    this.setState(({ contacts }) => ({
+      contacts: [contact, ...contacts],
     }));
   };
 
@@ -55,7 +55,7 @@ export class App extends Component {
     return contacts.filter(contact => contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))
   }
 
-  deleteContact = (contactId) => {
+  deleteContact = contactId => {
   this.setState(prevState => ({
     contacts: prevState.contacts.filter(contact => contact.id !== contactId)
   }))

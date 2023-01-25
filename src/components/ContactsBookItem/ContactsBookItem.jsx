@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { WrapperItem, Contacts, DeleteBtn } from './ContactsBookItem.styled';
 
 export const ContactsBookItem = ({ name, number, id, deleteContact }) => (
    
-    <div>
-        <p>{name}:{number}</p>
-        <button type="button" onClick = {() => deleteContact(id)}>Delete</button>
-    </div>
+    <WrapperItem>
+        <Contacts>{name}: {number}</Contacts>
+        <DeleteBtn type="button" onClick = {() => deleteContact(id)}>Delete</DeleteBtn>
+    </WrapperItem>
 )
 
 ContactsBookItem.propTypes = {
