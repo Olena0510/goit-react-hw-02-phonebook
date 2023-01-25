@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import { ContactsBookItem } from 'components/ContactsBookItem/ContactsBookItem';
 
-export const ContactsBookList = ({contacts, onDelete }) => {
+export const ContactsBookList = ({contacts, deleteContact }) => {
   return (
     <ul>
           {contacts.map(({ id, name, number }) => (
                   <li key={id}>
-                  <ContactsBookItem name={name} number={number} onDelete = {onDelete} />
+                  <ContactsBookItem name={name} number={number} deleteContact = {deleteContact} />
               </li>
           )
         )}

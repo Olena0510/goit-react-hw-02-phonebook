@@ -1,6 +1,6 @@
 import { Component } from "react";
 import PropTypes from 'prop-types';
-
+import { Wrapper, Title, LabelForm, InputForm, FormBtn } from "./ContactsForm.styled";
 
 export class ContactsForm extends Component {
 
@@ -38,11 +38,11 @@ resetForm = () => {
         
         
         return (
-            <div>
-                <h1>Phonebook</h1>
+            <Wrapper>
+                <Title>Phonebook</Title>
                 <form onSubmit={this.handleSubmit}>
-                    <label htmlFor = {this.InputName}>Name</label>
-                    <input
+                    <LabelForm htmlFor = {this.InputName}>Name</LabelForm>
+                    <InputForm
                         id={this.InputName}
                         value={this.state.name}
                         onChange = {this.handleInputChange}
@@ -53,8 +53,8 @@ resetForm = () => {
                    required
                     />  
                     
-                    <label htmlFor = {this.InputNumber}>Number</label>
-                    <input
+                    <LabelForm htmlFor = {this.InputNumber}>Number</LabelForm>
+                    <InputForm
                         id={this.InputNumber}
                         value={this.state.number}
                         onChange = {this.handleInputChange}
@@ -64,9 +64,9 @@ resetForm = () => {
                    title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                    required
 />  
-                   <button type="submit">Add contact</button>
+                   <FormBtn type="submit">Add contact</FormBtn>
                 </form>
-            </div>
+            </Wrapper>
         )
     }
 

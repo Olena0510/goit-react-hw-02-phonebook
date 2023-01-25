@@ -2,7 +2,6 @@ import { Component } from "react";
 import { ContactsForm } from "./ContactsForm/ContactsForm";
 import { nanoid } from "nanoid";
 import { ContactsBookList } from "./ContactsBookList/ContactsBookList";
-// import PropTypes from 'prop-types';
 import { Filter } from "./Filter/Filter";
 
 
@@ -71,7 +70,7 @@ export class App extends Component {
       <div>
         <ContactsForm onSubmit={this.addNameContact} />
         <Filter value = {filter} onChange = {this.filterByName}/>
-        <ContactsBookList contacts={filteredContacts} onDelete={this.deleteContact} />
+        <ContactsBookList contacts={filteredContacts} deleteContact={this.deleteContact} />
       </div>
 
     )
