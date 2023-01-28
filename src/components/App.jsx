@@ -63,14 +63,19 @@ export class App extends Component {
 
 
   render() {
-    const { filter } = this.state;
+    const { filter, contacts } = this.state;
     const filteredContacts = this.getContacts();
 
     return (
       <div>
         <ContactsForm onSubmit={this.addNameContact} />
-        <Filter value = {filter} onChange = {this.filterByName}/>
-        <ContactsBookList contacts={filteredContacts} deleteContact={this.deleteContact} />
+        <Filter value={filter} onChange={this.filterByName} />
+        {contacts.length === 0 ? (<p style={{
+          textAlign: "center",
+          fontSize: 20,
+          marginTop: 20
+        }}> There are no contacts in your phonebook</p>) : (
+          <ContactsBookList contacts={filteredContacts} deleteContact={this.deleteContact} />)}
       </div>
 
     )

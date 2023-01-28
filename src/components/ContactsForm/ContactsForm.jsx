@@ -5,7 +5,7 @@ import { Wrapper, Title, LabelForm, InputForm, FormBtn } from "./ContactsForm.st
 export class ContactsForm extends Component {
 
     static propTypes = {
-    onSubmit: PropTypes.func,
+    onSubmit: PropTypes.func.isRequired,
   };
 
     state = {
